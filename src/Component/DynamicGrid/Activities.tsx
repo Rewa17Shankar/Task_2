@@ -1,0 +1,108 @@
+import React from 'react'
+const emojiList =[{ emoji: '⚽', description: 'Soccer Ball' },
+    { emoji: '🏀', description: 'Basketball' },
+    { emoji: '🏈', description: 'American Football' },
+    { emoji: '⚾', description: 'Baseball' },
+    { emoji: '🎾', description: 'Tennis' },
+    { emoji: '🏐', description: 'Volleyball' },
+    { emoji: '🏉', description: 'Rugby Football' },
+    { emoji: '🎳', description: 'Bowling' },
+    { emoji: '🏓', description: 'Table Tennis' },
+    { emoji: '🏸', description: 'Badminton' },
+    { emoji: '🥋', description: 'Martial Arts Uniform' },
+    { emoji: '🏊', description: 'Person Swimming' },
+    { emoji: '🚴', description: 'Person Biking' },
+    { emoji: '🚵', description: 'Person Mountain Biking' },
+    { emoji: '🏌️', description: 'Person Golfing' },
+    { emoji: '⛷️', description: 'Skier' },
+    { emoji: '🏂', description: 'Snowboarder' },
+    { emoji: '🏇', description: 'Horse Racing' },
+    { emoji: '🚣', description: 'Person Rowing Boat' },
+    { emoji: '🛶', description: 'Canoe' },
+    { emoji: '⛵', description: 'Sailboat' },
+    { emoji: '🏄', description: 'Person Surfing' },
+    { emoji: '🏋️', description: 'Person Weightlifting' },
+    { emoji: '🤸', description: 'Person Cartwheeling' },
+    { emoji: '🤼', description: 'People Wrestling' },
+    { emoji: '🤹', description: 'Person Juggling' },
+    { emoji: '🎤', description: 'Microphone' },
+    { emoji: '🎧', description: 'Headphone' },
+    { emoji: '🎸', description: 'Guitar' },
+    { emoji: '🎻', description: 'Violin' },
+    { emoji: '🥁', description: 'Drum' },
+    { emoji: '🎼', description: 'Musical Score' },
+    { emoji: '🎭', description: 'Performing Arts' },
+    { emoji: '🎨', description: 'Artist Palette' },
+    { emoji: '🖌️', description: 'Paintbrush' },
+    { emoji: '🖍️', description: 'Crayon' },
+    { emoji: '📚', description: 'Books' },
+    { emoji: '📖', description: 'Open Book' },
+    { emoji: '✏️', description: 'Pencil' },
+    { emoji: '✂️', description: 'Scissors' },
+    { emoji: '🧶', description: 'Yarn' },
+    { emoji: '🧩', description: 'Puzzle Piece' },
+    { emoji: '🪄', description: 'Magic Wand' },
+    { emoji: '🎲', description: 'Game Die' },
+    { emoji: '🧙‍♂️', description: 'Wizard' },
+    { emoji: '🎯', description: 'Direct Hit' },
+    { emoji: '🏺', description: 'Amphora' },
+    { emoji: '🔍', description: 'Magnifying Glass' },
+    { emoji: '🎳', description: 'Bowling' },
+    { emoji: '🧗', description: 'Person Climbing' },
+    { emoji: '🪂', description: 'Parachute' },
+    { emoji: '🏋️‍♂️', description: 'Weightlifter' },
+    { emoji: '🧘‍♀️', description: 'Person in Lotus Position' },
+    { emoji: '🪁', description: 'Kite' },
+    { emoji: '🛹', description: 'Skateboard' },
+    { emoji: '🧗‍♀️', description: 'Woman Climbing' },
+    { emoji: '🤽', description: 'Water Polo' },
+    { emoji: '🧖‍♀️', description: 'Woman in Steamy Room' },
+    { emoji: '🛶', description: 'Canoe' },
+    { emoji: '🥋', description: 'Martial Arts Uniform' },
+    { emoji: '🧖', description: 'Person in Steamy Room' },
+    { emoji: '⛷️', description: 'Skier' },
+    { emoji: '🏂', description: 'Snowboarder' },
+    { emoji: '🎿', description: 'Skis' },
+    { emoji: '🏍️', description: 'Motorcycle' },
+    { emoji: '🤼‍♂️', description: 'Men Wrestling' },
+    { emoji: '🤽‍♀️', description: 'Woman Playing Water Polo' },
+    { emoji: '🤽‍♂️', description: 'Man Playing Water Polo' },
+    { emoji: '🚴‍♀️', description: 'Woman Biking' },
+    { emoji: '🚴‍♂️', description: 'Man Biking' },
+    { emoji: '🚣‍♂️', description: 'Man Rowing Boat' },
+    { emoji: '🚣‍♀️', description: 'Woman Rowing Boat' },
+    { emoji: '⛺', description: 'Tent' },
+    { emoji: '🏞️', description: 'National Park' },
+    { emoji: '🏖️', description: 'Beach with Umbrella' },
+    { emoji: '🏕️', description: 'Camping' },
+    { emoji: '🚲', description: 'Bicycle' },
+    { emoji: '🎪', description: 'Circus Tent' },
+    { emoji: '💃', description: 'Dancer' },
+    { emoji: '🕺', description: 'Man Dancing' },
+    { emoji: '🏆', description: 'Trophy' },
+    { emoji: '🏅', description: 'Medal' },
+    { emoji: '🎟️', description: 'Admission Tickets' },
+    { emoji: '🚀', description: 'Rocket' },
+    { emoji: '🧑‍🚀', description: 'Astronaut' },
+    { emoji: '🧑‍🎤', description: 'Singer' },
+    { emoji: '🧑‍🎨', description: 'Artist' },
+    { emoji: '🎊', description: 'Confetti Ball' },
+    { emoji: '🏳️‍🌈', description: 'Rainbow Flag' },];
+const Activities:React.FC=()=> {
+  return (
+    <div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '10px' }}>
+        {emojiList.map((item, index) => (
+          <div key={index} className="emoji-card p-4 border rounded text-center bg-light hover-effect">
+            <div  style={{ display:'flex', alignItems: 'flex-end', height:'15px', width:'15px'  }}>
+              <img src="/bookmark.png" alt="" />
+            </div>
+            <div className="emoji" style={{ fontSize: '2rem' }}>{item.emoji}</div>
+            <div className="description mt-2">{item.description}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+export default Activities;

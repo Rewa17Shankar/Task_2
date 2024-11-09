@@ -3,11 +3,16 @@ body {
   background-color: #f7f7f9;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   color: #333;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  padding: 20px;
 }
 
 h1 {
@@ -17,8 +22,9 @@ h1 {
 }
 
 .emoji-table {
-  width: 90%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
   border-collapse: collapse;
   margin-top: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -31,7 +37,7 @@ h1 {
   padding: 15px;
   text-align: center;
   font-size: 1.1rem;
-  width: 50%; /* Ensures 50-50 partition */
+  width: 50%;
 }
 
 .emoji-table th {
@@ -49,8 +55,8 @@ h1 {
 }
 
 .emoji-table td:first-child {
-  font-size: 3rem; /* Larger font size for the emoji */
-  vertical-align: middle; /* Center vertically */
+  font-size: 3rem;
+  vertical-align: middle;
 }
 
 .emoji-table tbody tr:hover {
@@ -69,34 +75,4 @@ h1 {
 .emoji-table td:hover {
   background-color: #e8f5e9;
   transition: background-color 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .emoji-table {
-    width: 100%;
-  }
-
-  .emoji-table th, .emoji-table td {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .emoji-table td:first-child {
-    font-size: 2.5rem; /* Adjusted size for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  .emoji-table th, .emoji-table td {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  .emoji-table td:first-child {
-    font-size: 2rem; /* Smaller emoji size for very small screens */
-  }
 }
